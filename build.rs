@@ -8,12 +8,6 @@ fn main() {
     let dst = PathBuf::from(env::var_os("OUT_DIR").unwrap()).join("mesa");
     let _ = fs::create_dir(&dst);
 
-    if let Ok(read_dir) = fs::read_dir("/builds/worker/fetches/wrench-deps/meson/bin") {
-        for entry in read_dir {
-            eprintln!("\tfile {:?}", entry.unwrap().path());
-        }
-    }
-
     if !dst.join("build.ninja").exists() {
         let mut cmd = Command::new("meson");
         match env::var_os("CARGO_CFG_TARGET_VENDOR")

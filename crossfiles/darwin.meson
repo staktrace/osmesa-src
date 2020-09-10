@@ -1,6 +1,4 @@
 [binaries]
-c = 'gcc'
-cpp = 'g++'
 ar = 'x86_64-apple-darwin-ar'
 ld = 'x86_64-apple-darwin-ld'
 pkg-config = 'x86_64-apple-darwin-pkg-config'
@@ -8,7 +6,7 @@ strip = 'x86_64-apple-darwin-strip'
 
 [properties]
 
-[target_machine]
+[host_machine]
 system = 'darwin'
 cpu_family = 'x86_64'
 cpu = 'i686'
